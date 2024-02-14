@@ -32,25 +32,56 @@
         </div>
       </div>
     </div>
-    <!-- Right side of Navbar -->
+
+    <!-- <-- Right side of Navbar -->
     <div class="right">
       <ul>
         <li>
-
+          <i class="fa-solid fa-heart"></i>
         </li>
         <li>
-
-          <p>Settings</p>
+          <p><i class="fa-solid fa-gear"></i>Settings</p>
         </li>
         <li>
-
+          <i class="fa-solid fa-book"></i>
         </li>
         <li>Sign Up</li>
         <li>Log In</li>
       </ul>
     </div>
   </div>
-  
+  <section class="body_middle">
+    <!-- <div class="container">
+    <div class="right">
+        <iframe id="output"></iframe>
+
+    </div> -->
+
+    <div class="right_12">
+      <label><i class="fa-brands fa-html5"></i>Html</label>
+      <textarea name="" id="html-code" onkeyup="run()" cols="30" rows="10"></textarea>
+      <label><i class="fa-brands fa-css3-alt"></i>Css</label>
+      <textarea name="" id="Css-code" onkeyup="run()" cols="30" rows="10"></textarea>
+      <label><i class="fa-brands fa-css3-alt"></i>Javascript</label>
+      <textarea name="" id="Js-code" onkeyup="run()" cols="30" rows="10"></textarea>
+    </div>
+
+    </div>
+    <script>
+
+      function run() {
+        let htmlCode = document.getElementById("html-code").values;
+        let CssCode = document.getElementById("Css-code").values;
+        let JSCode = document.getElementById("JS-code").values;
+        // let output=document.getElementById("output");
+        output.contentDocument.body.innerHTML = htmlCode + "<style>" + CssCode + "<style>";
+        output.contentWindow.eval(JSCode);
+      }
+    </script>
+  </section>
+
+
+
   <!-- footer -->
   <div class="bottom_bar ">
     <!-- left buttons of footer -->
